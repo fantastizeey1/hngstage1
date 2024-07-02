@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tech Goals</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Tech Goals for the Next 2 Years</h1>
+        <nav>
+          <div class="profile">
+            <img
+              src="slack.jpeg"
+              alt="Slack Profile Picture"
+              data-testid="slackProfilePicture"
+            />
+            <p data-testid="slackDisplayName">Enitan</p>
+          </div>
+          <section class="info">
+            <p data-testid="currentTimeUTC"></p>
+            <p data-testid="currentDay"></p>
+            <p data-testid="slackEmail">enitan.ayoola007@gmail.com</p>
+          </section>
+        </nav>
+      </header>
+      <section class="goals">
+        <h2>Ayoola Enitan Prevail</h2>
+        <p>
+          My name is Enitan Prevail Ayoola. I feel it would be weird to just
+          list my goals without talking about myself a little bit first for
+          context. I studied mechanical engineering, but I have been
+          self-learning frontend development for a little over a year—about 15
+          months to be precise. It has been a wonderful journey that I've
+          enjoyed every part of. At first, it was a hard choice between frontend
+          and backend development, but I realized I like seeing the reactions on
+          people's faces when they see what I have built for them. That's why I
+          tilted towards frontend development. Lately, prompt engineering and
+          cloud computing have piqued my interest. I know that once I have
+          mastered my craft in frontend development, my career path will likely
+          lie with one of these two fields. With this background, I hope my
+          goals will make more sense to you now. Thank you for coming to my pep
+          talk.
+        </p>
+        <h2>My Tech Goals for the Foreseeable Future</h2>
+        <ul>
+          <li>
+            Master advanced JavaScript frameworks such as React and Vue.js
+          </li>
+          <li>
+            Contribute regularly to open-source projects to improve coding
+            skills and give back to the community
+          </li>
+          <li>
+            Obtain a certification in cloud computing (AWS, Azure, or Google
+            Cloud)
+          </li>
+          <li>
+            Learn and implement best practices in DevOps to streamline
+            development and deployment processes
+          </li>
+          <li>
+            Enhance my knowledge in cybersecurity to build more secure
+            applications
+          </li>
+          <li>
+            Network with other tech professionals and attend industry
+            conferences
+          </li>
+          <li>
+            Take part in hackathons and coding competitions to test and improve
+            my skills under pressure
+          </li>
+        </ul>
+      </section>
+
+      <section class="links">
+        <h2>Useful Links</h2>
+        <p>
+          This is an assignment from
+          <a href="http://hng.tech/learn" data-testid="hngLink">HNG Tech</a>
+          internship, frontend stage one task. I really want to appreciate the
+          founder for the opportunity to grow, connect, and learn from this
+          program. I look forward to maximizing this opportunity. As part of the
+          assignment, we are to point a link to
+          <a href="http://keyword.dog" data-testid="keywordLink">Keyword Dog</a
+          >. I don't know why, lol, but I will follow the instructions. Here is
+          the last link:
+          <a href="https://portfoleoz.vercel.app/" data-testid="myPortfolio"
+            >my portfolio</a
+          >
+          in case you are interested. The End.
+        </p>
+      </section>
+    </div>
+    <script>
+      function updateTime() {
+        const now = new Date();
+        const utcTime = now.toUTCString().split(" ")[4];
+        const dayOfWeek = now.toLocaleString("en-us", { weekday: "long" });
+        document.querySelector(
+          '[data-testid="currentTimeUTC"]'
+        ).textContent = `Current Time (UTC): ${utcTime}`;
+        document.querySelector(
+          '[data-testid="currentDay"]'
+        ).textContent = `Current Day: ${dayOfWeek}`;
+      }
+
+      updateTime();
+      setInterval(updateTime, 1000); // Update every second
+    </script>
+  </body>
+</html>
