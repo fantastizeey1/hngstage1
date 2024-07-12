@@ -128,7 +128,7 @@ body {
 
 .goals ul {
   list-style: none;
-  padding: 0;
+  padding: 1px;
 }
 
 .goals li {
